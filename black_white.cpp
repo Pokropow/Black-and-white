@@ -100,7 +100,7 @@ Vector3 pixelToVec(unsigned int a)
 COLORREF colorToBlack_White(COLORREF col)
 {
     Vector3 v = pixelToVec(col);
-    const float r = 650,g = 510, b = 475;
+    const float r = 1.0/650,g = 1.0/510, b = 1.0/475; /// iversed wave lenghts of light - red green and blue
     int x = (v.x*r+v.y*g+v.z*b)/(r+g+b);
     return RGB(x,x,x);
 }
